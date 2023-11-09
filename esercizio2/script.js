@@ -15,5 +15,14 @@
 const punteggioGiocatore = Math.floor(Math.random() * 6) + 1;
 const punteggioComputer = Math.floor(Math.random() * 6) + 1;
 
-console.log('Punteggio del giocatore:' + punteggioGiocatore);
-console.log('Punteggio del computer:' + punteggioComputer);
+console.log('Punteggio del giocatore:' + ' ' + punteggioGiocatore);
+console.log('Punteggio del computer:' + ' ' + punteggioComputer);
+
+//2)
+if (punteggioGiocatore > punteggioComputer) {
+  console.log('Il giocatore vince');
+} else if (punteggioComputer > punteggioGiocatore) {
+  console.log('Il computer vince');
+} else {
+  console.log('E un pareggio');
+}
