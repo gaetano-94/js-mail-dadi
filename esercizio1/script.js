@@ -10,7 +10,7 @@
 
 2) creare un ARRAY con delle ipotetiche email, cosi da poter fare un ciclo e controllare se l'email del utente e presente
 
-3) creare un ciclo con FOR collegato a un variabile ARRAY, facendo ciò possiamo vedere se l'email ci sia nella lista oppure no
+3) creare un ciclo con If collegato a un variabile ARRAY, facendo ciò possiamo vedere se l'email ci sia nella lista oppure no
 */
 
 //1)
@@ -19,6 +19,19 @@ console.log(emailUtente);
 
 //2)
 const varArray = ['gaetano@gmail.com', 'luca@libero.it', 'paolo@hotmail.it'];
-console.log(varArray);
 
 //3)
+let emailTrovata = false;
+for (let i = 0; i < varArray.length; i++) {
+  let elemento = varArray[i];
+
+  if (emailUtente === elemento) {
+    emailTrovata = true;
+  }
+}
+
+if (emailTrovata === true) {
+  console.log('email trovata');
+} else {
+  console.log('email non trovata');
+}
